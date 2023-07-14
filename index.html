@@ -1,23 +1,56 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-
+<style>
+    input {
+        margin-top: 5px;
+    }
+</style>
 <body>
     <div>
+        <h1>Online Fibonacci Coding Converter</h1>
         <p>
-            A simple online tool for converting between decimal numbers and their <a
-                href="https://en.wikipedia.org/wiki/Fibonacci_coding">Fibonacci coding</a>.
+            A simple online tool for converting between decimal numbers, <a
+                href="https://en.wikipedia.org/wiki/Fibonacci_coding">Fibonacci coding</a>, and <a
+                href="https://en.wikipedia.org/wiki/Negafibonacci_coding">Negafibonacci coding</a>.
         </p>
-        <br>
         <div>
-            Input:
-            <input type="text" id="input" size="50">
-            <button id="d2f">Decimal to Fibonacci</button>
-            <button id="f2d">Fibonacci to Decimal</button>
+            <fieldset>
+                <legend>From</legend>
+                <div><input type="radio" id="fibonacci" name="from" value="fibonacci">
+                    <label for="fibonacci">fibonacci</label>
+                </div>
+                <div><input type="radio" id="negafibonacci" name="from" value="negafibonacci">
+                    <label for="negafibonacci">negafibonacci</label>
+                </div>
+                <div>
+                    <input type="radio" id="decimal" name="from" value="decimal" checked>
+                    <label for="decimal">decimal</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>To</legend>
+                <div><input type="radio" id="fibonacci-to" name="to" value="fibonacci" checked>
+                    <label for="fibonacci">fibonacci</label>
+                </div>
+                <div><input type="radio" id="negafibonacci-to" name="to" value="negafibonacci">
+                    <label for="negafibonacci">negafibonacci</label>
+                </div>
+                <div>
+                    <input type="radio" id="decimal-to" name="to" value="decimal">
+                    <label for="decimal">decimal</label>
+                </div>
+            </fieldset>
         </div>
         <br>
         <div>
-            Output:
+            <input type="text" id="input" size="50">
+            <label for="input">Input</label>
+            <button id="convert">Convert</button>
+        </div>
+        <br>
+        <div>
             <input type="text" id="output" size="50">
+            <label for="output">Output</label>
         </div>
     </div>
     <script src="./script.js"></script>
